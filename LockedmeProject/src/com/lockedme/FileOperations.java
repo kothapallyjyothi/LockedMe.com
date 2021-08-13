@@ -16,17 +16,7 @@ public class FileOperations
 	{
 		
 		
-//		public static List<String> getAllFiles(String folderpath){
-//			//creating File Object
-//					File fl = new File(folderpath);
-//					//getting all the files into FileArray
-//					File[] listofFiles = fl.listFiles();
-//					//declare a list to store file names
-//					List<String> fileNames = new ArrayList<String>();
-//					
-//					for (File f:listofFiles) //Using ForEach to get the file names 
-//						fileNames.add(f.getName());
-//					return fileNames;
+
 		//creating File Object
 		File f1 = new File(folderpath);
 		//Getting all the files into FileArray
@@ -34,7 +24,7 @@ public class FileOperations
 		
 		//Declare a list to store file names
 		List<String> fileNames = new ArrayList<String>();
-		//declare for each loop for get
+		//declare for each loop for get the file names
 		for(File f:listOfFiles)
 			fileNames.add(f.getName());
 		//return the List

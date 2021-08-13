@@ -15,12 +15,13 @@ public class WelcomeAndMenuOptions {
 		String menu = "\n\n****** Select any option number from below and press Enter ******\n\n"+ "1) Retrieve all files inside \"directory\" folder\n" + "2) Display menu for File operations\n"+ "3) Exit program\n";
 		
 		System.out.println(menu);
-		System.out.println("Enter The choice: \n"); 
+		System.out.println("Enter your choice: \n"); 
 		
 		
 	}
 	
 	public static void displayFileMenuOption() {
+		
 		// Creating a DisplayFileMenuOption to Add,Search,and Delete File
 		String fileMenu = "\n\n****** Select any option number from below and press Enter ******\n\n"
 				+ "1) Add a file to \"directoryy\" folder\n" + "2) Delete a file from \"directory\" folder\n"

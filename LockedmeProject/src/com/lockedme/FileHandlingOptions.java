@@ -40,13 +40,13 @@ public class FileHandlingOptions {
 	public static   boolean welcomeScreenOptions()
 	{
 	
-	
-	//Variable declaration
+		do {
+			//Variable declaration
 		Scanner sc = new Scanner(System.in);
 		int ch;
 		
 		WelcomeAndMenuOptions.displayFileMenuOption();	
-do {
+
 		try 
 		{
 		//Menu 
@@ -79,14 +79,12 @@ do {
 			e.printStackTrace();
 			
 		}
-	while (true);
-}
-	
+}while (true);
+	}
 	public static boolean FileHandlingDisplayMenu()
 	{
 	
-		int proceed =1;
-		while (proceed>0)
+		do
 			
 		{
 			try
@@ -97,9 +95,6 @@ do {
 				//Variable declaration
 				Scanner obj = new Scanner(System.in);
 				int ch;
-				
-					
-				
 				ch=Integer.parseInt(obj.nextLine());
 				
 				//
@@ -129,10 +124,8 @@ do {
 				System.out.println(Ex.getClass().getName());
 //				 FileHandlingDisplayMenu();
 			}
-			proceed = proceed +1 ;
-		}
-		
-		return false;
-	}
+			
+		}while (true);
+			}
 	
 	}
