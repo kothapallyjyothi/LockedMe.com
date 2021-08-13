@@ -14,6 +14,19 @@ public class FileOperations
 	 */
 	public static List<String> getAllFiles(String folderpath)
 	{
+		
+		
+//		public static List<String> getAllFiles(String folderpath){
+//			//creating File Object
+//					File fl = new File(folderpath);
+//					//getting all the files into FileArray
+//					File[] listofFiles = fl.listFiles();
+//					//declare a list to store file names
+//					List<String> fileNames = new ArrayList<String>();
+//					
+//					for (File f:listofFiles) //Using ForEach to get the file names 
+//						fileNames.add(f.getName());
+//					return fileNames;
 		//creating File Object
 		File f1 = new File(folderpath);
 		//Getting all the files into FileArray
@@ -24,10 +37,9 @@ public class FileOperations
 		//declare for each loop for get
 		for(File f:listOfFiles)
 			fileNames.add(f.getName());
-		
 		//return the List
 			return fileNames;
-		
+//		
 	}
 	/**
 	 * This method will create or append content into the file specified
@@ -40,6 +52,8 @@ public class FileOperations
 	{
 		try
 		{
+			
+			
 			//created object of folderPath and fileName
 			File f1 = new File(folderpath, fileName);
 			FileWriter fw = new FileWriter(f1);

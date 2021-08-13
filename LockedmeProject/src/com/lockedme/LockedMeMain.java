@@ -1,58 +1,99 @@
 package com.lockedme;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
 
 public class LockedMeMain {
 
-	static final String folderpath="C:\\MyPhase1Project\\LockedMeFiles";
+	static final String folderpath="C:\\MyPhase1Project\\SourceCode\\LockedmeProject\\directory";
 	public static void main(String[] args) 
 {
-		
-				{
-						//Variable declaration
-						Scanner obj = new Scanner(System.in);
-						int ch;
-						
-						//Menu 
-						displayMenu();
-						System.out.println("Enter your choice:");
-						ch=Integer.parseInt(obj.nextLine());
-						
-						//
-						switch(ch)
-						{
-						case 1 : getAllFiles();
-								break;
-						case 2 : createFiles();
-								break;
-						case 3: deleteFile();
-								break;
-						case 4: searchFile();
-								break;
-						case 5: System.exit(0);
-								break;
-						default : System.out.println("Invalid Option");
-								break;
-						}		
-				
-				}
+		FileHandlingOptions.displayFirstMenuOptions();
+	
 			}	
-			//display the options 
-			public static void displayMenu()
-			{
-				System.out.println("***********************************************************");
-				System.out.println("\t\tWelcome to LockedMe.com\t\t ");
-				System.out.println("");
-				System.out.println("***********************************************************");
-				System.out.println("1.Display all files ");
-				System.out.println("2.Add new file"); 
-				System.out.println("3.Delete a file");
-				System.out.println("4.Search a file");
-				System.out.println("5.Exit");
-				System.out.println("***********************************************************");
-			}
+//	public static boolean displayFirstMenuOptions()
+//	{
+//		do {
+//			try
+//			{
+//				Scanner sc = new Scanner(System.in);
+//				int input;
+//				WelcomeAndMenuOptions.displayMenu();
+//				input = Integer.parseInt(sc.nextLine()); //Taking Input from the user
+//				switch (input)
+//				{
+//				case 1:
+//					LockedMeMain.getAllFiles(); //Display files in the directory
+//					break;
+//				case 2:
+//					LockedMeMain.welcomeScreenOptions();
+//					break;
+//				case 3:
+//					System.out.println("Program exited successfully."); //exit the program
+//					return true;
+//				case 4:System.exit(0);
+//				break;
+//			default:
+//				System.out.println("Please select a valid option from above.");//In case of invailed Entery  
+//				}
+//			}
+//				catch (Exception ex)
+//				{
+//					System.out.println(ex.getClass().getName());
+//				}
+//		}while (true);
+//		
+//		
+//		
+//	}
+//			public static   boolean welcomeScreenOptions()
+//				{
+//				
+//				
+//				//Variable declaration
+//					Scanner sc = new Scanner(System.in);
+//					int ch;
+//					
+//					WelcomeAndMenuOptions.displayFileMenuOption();	
+//
+//					try 
+//					{
+//					//Menu 
+//					
+//					ch=Integer.parseInt(sc.nextLine());
+//					
+//					//
+//					switch(ch)
+//					{
+//					
+//					case 1 : createFiles(); //getting the filenames from folderpath
+//							break;
+//					case 2 : deleteFile(); // creating new file in folderpath
+//							break;
+//					case 3: searchFile();	// deleting a file from folderpath
+//							break;
+//					case 4: return false;	//Search a file from given folderpath
+//							
+//					case 5: System.exit(0);	//
+//							break;
+//					default : System.out.println("Invalid Option");
+//							break;
+//					
+//				}
+//					}
+//					catch(Exception e)
+//					{
+//						System.out.println(e.getClass().getName());
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//						
+//					}
+//					return true;
+//				
+//			}
+			
 			public static void getAllFiles()
 			{
 				
@@ -60,10 +101,16 @@ public class LockedMeMain {
 
 				// TODO Auto-generated method stub
 
-					List<String> fileNames = FileOperations.getAllFiles(folderpath);
-						
-					for(String f:fileNames)
-					System.out.println(f);
+				//get file names
+				//Using forEach 
+				List<String> fileName = FileOperations.getAllFiles(folderpath);
+				for (String f :fileName)
+					System.out.println(f);	
+				
+//					List<String> fileNames = FileOperations.getAllFiles(folderpath);
+//						
+//					for(String f:fileNames)
+//					System.out.println(f);
 			}
 			/**This class to create files calling method  from FileOperations
 			 * 
