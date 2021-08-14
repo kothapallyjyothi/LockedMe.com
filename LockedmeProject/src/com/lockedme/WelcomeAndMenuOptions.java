@@ -6,6 +6,7 @@ public class WelcomeAndMenuOptions {
 	{
 		Object companyName = "Lockedme";
 		Object developerName = " Jyothi Kothapally" ;
+		//welcome page 
 		String companyDetails = String.format("*****************************************************\n"+ "** Welcome to %s.com. \n" + "** This application was developed by %s.\n"+ "*****************************************************\n", companyName, developerName);String appFunction = "You can use this application to :-\n"+ "• Retrieve all file names in the \"directory\" folder\n"+ "• Search, add, or delete files in \"directory\" folder.\n"+ "\n**Please be careful to ensure the correct filename is provided for searching or deleting files.**\n";
 		System.out.println(companyDetails);
 
@@ -25,7 +26,7 @@ public class WelcomeAndMenuOptions {
 		// Creating a DisplayFileMenuOption to Add,Search,and Delete File
 		String fileMenu = "\n\n****** Select any option number from below and press Enter ******\n\n"
 				+ "1) Add a file to \"directoryy\" folder\n" + "2) Delete a file from \"directory\" folder\n"
-				+ "3) Search for a file from \"directory\" folder\n" + "4) Show Previous Menu\n" + "5) Exit program\n";
+				+ "3) Search for a file from \"directory\" folder\n" + "4) Show Previous Menu\n";
 
 		System.out.println(fileMenu);
 		

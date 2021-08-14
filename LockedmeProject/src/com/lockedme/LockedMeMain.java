@@ -1,7 +1,6 @@
 package com.lockedme;
 
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ public class LockedMeMain {
 		//Display Main Menu Options
 		FileHandlingOptions.displayFirstMenuOptions();
 	
-			}	
+		}	
 
 			public static void getAllFiles()
 			{

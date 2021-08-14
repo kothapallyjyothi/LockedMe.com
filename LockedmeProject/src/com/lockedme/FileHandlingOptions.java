@@ -53,24 +53,24 @@ public class FileHandlingOptions {
 		
 		ch=Integer.parseInt(sc.nextLine());
 		
-		//
-		switch(ch)
-		{
-		
-		case 1 : LockedMeMain.createFiles(); //getting the filenames from folderpath
-				break;
-		case 2 :LockedMeMain.deleteFile(); // creating new file in folderpath
-				break;
-		case 3: LockedMeMain.searchFile();	// deleting a file from folderpath
-				break;
-		case 4: return false;	//Search a file from given folderpath
-				
-		case 5: System.exit(0);	//
-				break;
-		default : System.out.println("Invalid Option");
-				break;
-		
-	}
+		//switch 
+			switch(ch)
+			 {
+			
+				case 1 : LockedMeMain.createFiles(); //getting the filenames from folderpath
+						break;
+				case 2 :LockedMeMain.deleteFile(); // creating new file in folderpath
+						break;
+				case 3: LockedMeMain.searchFile();	// deleting a file from folderpath
+						break;
+				case 4: return false;	//Search a file from given folderpath
+						
+				case 5: System.exit(0);	//
+						break;
+				default : System.out.println("Invalid Option");
+						break;
+			
+			 }
 		}
 		catch(Exception e)
 		{
